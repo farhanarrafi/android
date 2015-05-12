@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">calculator</string>
+    <string name="num1">1</string>
+    <string name="num2">2</string>
+    <string name="num3">3</string>
+    <string name="num4">4</string>
+    
+    <string name="num5">5</string>
+    <string name="num6">6</string>
+    <string name="num7">7</string>
+    <string name="num8">8</string>
+    
+    <string name="num9">9</string>
+    <string name="num0">0</string>
+    
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    
+    <string name="prd">x</string>
+    <string name="div">÷</string>
+    
+    <string name="dot">.</string>
+    <string name="eql">=</string>
+    
+    
+    <string name="clr">C</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, IntentApplicationActivity!</string>
+    <string name="app_name">IntentApplication</string>
+    
+    <string-array name="curreny_list">
+        <item>Taka</item>
+        <item>Dollar</item>
+        <item>Ringit</item>
+        <item>Rupee</item>
+    </string-array>
+
+</resources>
