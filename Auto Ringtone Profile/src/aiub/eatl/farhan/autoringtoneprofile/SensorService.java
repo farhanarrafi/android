@@ -36,7 +36,6 @@ public class SensorService extends Service implements SensorEventListener {
 		//Toast.makeText(getApplicationContext(), "Serivce onStartCommand", Toast.LENGTH_SHORT).show();
 		sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 		proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-		
 		sensorManager.registerListener(this, proximitySensor, SensorManager.SENSOR_DELAY_FASTEST);
 		audioManager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
 		
@@ -54,26 +53,26 @@ public class SensorService extends Service implements SensorEventListener {
 		
 	}
 	
-	private int toggle(int current) {
-		if(current==AudioManager.RINGER_MODE_NORMAL)
-			return AudioManager.RINGER_MODE_VIBRATE;
-		else 
-			return AudioManager.RINGER_MODE_NORMAL;
-	}
+//	private int toggle(int current) {
+//		if(current==AudioManager.RINGER_MODE_NORMAL)
+//			return AudioManager.RINGER_MODE_VIBRATE;
+//		else 
+//			return AudioManager.RINGER_MODE_NORMAL;
+//	}
 
 	public void onSensorChanged(SensorEvent event) {
 		if(event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
 			double proximityValue = event.values[0];
 			//Toast.makeText(getApplicationContext(), , Toast.LENGTH_SHORT/10).show();
-			Log.d("Proximity Value", ""+proximityValue);
+			//Log.d("Proximity Value", ""+proximityValue);
 			if(proximityValue==0) {
-				audioManager.setRingerMode(toggle(audioManager.getRingerMode()));
-				//audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
+				//audioManager.setRingerMode(toggle(audioManager.getRingerMode()));
+				audioManager.setRingerMode(AudioManager.RINGER_MODE_VIBRATE);
 				//Toast.makeText(getApplicationContext(), "WILL VIBRATE NOW", Toast.LENGTH_SHORT).show();
 			}
 			else {
 				
-				//audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
+				audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);
 				//Toast.makeText(getApplicationContext(), "WILL RING NOW", Toast.LENGTH_SHORT).show();
 			}
 		}
